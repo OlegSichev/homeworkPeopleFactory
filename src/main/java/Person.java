@@ -4,7 +4,7 @@ public class Person {
     protected final String name;
     protected final String surname;
     protected int age = -1;
-    protected String adress;
+    protected String address;
 
     public Person(String name, String surname) {
         this.name = name;
@@ -17,17 +17,17 @@ public class Person {
         this.age = age;
     }
 
-    public Person(String name, String surname, String adress) {
+    public Person(String name, String surname, String address) {
         this.name = name;
         this.surname = surname;
-        this.adress = adress;
+        this.address = address;
     }
 
-    public Person(String name, String surname, int age, String adress) {
+    public Person(String name, String surname, int age, String address) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.adress = adress;
+        this.address = address;
     }
 
     public String getName() {
@@ -42,12 +42,12 @@ public class Person {
         return surname;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public boolean hasAge() {
@@ -58,7 +58,7 @@ public class Person {
     }
 
     public boolean hasAdress() {
-        if (adress == null) {
+        if (address == null) {
             return false;
         }
         return true;
@@ -76,7 +76,7 @@ public class Person {
         PersonBuilder personBuilder = new PersonBuilder();
         personBuilder.setSurname(this.surname);
         personBuilder.setAge(0);
-        personBuilder.setAdress(this.adress);
+        personBuilder.setAdress(this.address);
         return personBuilder;
     }
 
@@ -87,6 +87,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Имя: " + getName() + " Фамилия: " + getSurname() + " Возраст: " + getAge() + " Город: " + getAdress();
+        return "Имя: " + getName() + " Фамилия: " + getSurname() + " Возраст: " + getAge() + " Город: " + getAddress();
     }
 }
