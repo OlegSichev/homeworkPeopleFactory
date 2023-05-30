@@ -4,21 +4,25 @@ public class PersonBuilder {
     private int age = -1;
     private String city;
 
-    public void setName(String name) {
+    public PersonBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public void setSurname(String surname) {
+    public PersonBuilder setSurname(String surname) {
         this.surname = surname;
+        return this;
     }
 
-    public void setAge(int age) {
+    public PersonBuilder setAge(int age) {
         if (age > 150 || age < 0) throw new IllegalArgumentException("Возраст некорректен");
         this.age = age;
+        return this;
     }
 
-    public void setAdress(String city) {
+    public PersonBuilder setAddress(String city) {
         this.city = city;
+        return this;
     }
 
     public Person build() {

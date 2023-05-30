@@ -76,7 +76,7 @@ public class Person {
         PersonBuilder personBuilder = new PersonBuilder();
         personBuilder.setSurname(this.surname);
         personBuilder.setAge(0);
-        personBuilder.setAdress(this.address);
+        personBuilder.setAddress(this.address);
         return personBuilder;
     }
 
